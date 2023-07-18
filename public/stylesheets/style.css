@@ -1,8 +1,47 @@
 body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  font:  "Lucida Grande", Helvetica, Arial, sans-serif;
+  align-items: center;
 }
 
 a {
   color: #00B7FF;
+}
+
+.layout {
+  display: grid;
+  grid-template-areas:
+    'header header  header header  '
+    'menu main main main  '
+    'menu footer footer  footer ';
+  gap: 10px;
+  background-color: #2196F3;
+  height: 100%;
+  width: 100%;
+  grid-template-rows: 7% auto 3%;
+  grid-template-columns: 20% auto ;
+  
+}
+
+.header { 
+  grid-area: header;
+ }
+.nav { 
+  grid-area: menu;
+ }
+.content { 
+  grid-area: main;
+
+ }
+.section { 
+  grid-area: right; 
+}
+.footer { 
+  grid-area: footer; 
+}
+
+.layout > div {
+  background-color: rgba(255, 255, 255, 0.8);
+  text-align: center;
+ 
+  
 }

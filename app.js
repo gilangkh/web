@@ -14,8 +14,10 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
-app.get("/user", (req,res,next)=>{
+
+app.get("/user", (req,res,)=>{
     res.sendFile(__dirname+'/public/user.html')
+    
   })
 
 module.exports = app;
